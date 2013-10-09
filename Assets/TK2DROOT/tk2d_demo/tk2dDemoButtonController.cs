@@ -9,7 +9,7 @@ public class tk2dDemoButtonController : MonoBehaviour
 	// update
 	void Update() 
 	{
-		transform.RotateAround(Vector3.up, spinSpeed * Time.deltaTime);
+		transform.Rotate(Vector3.up, spinSpeed * Time.deltaTime);
 	}
 	
 	void SpinLeft()

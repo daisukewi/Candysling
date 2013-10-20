@@ -5,10 +5,12 @@ public class TouchControl : MonoBehaviour
 {
 	private BoxCollider boxCollider;
 	private bool shutting = false;
+	private Plane ArrowPlane;
 	
 	public GameObject Candy;
 	public float ShootForce = 400.0f;
-	
+	public Texture2D ArrowTexure;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -29,7 +31,6 @@ public class TouchControl : MonoBehaviour
 			intersectVect.z = transform.position.z;
 			
 			//Draw here the arrow
-			Debug.DrawLine (transform.position, intersectVect, Color.red, 0, false);
 			
 			if (!shutting && boxCollider.bounds.Contains (intersectVect)) {
 				shutting = true;
